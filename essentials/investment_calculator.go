@@ -6,24 +6,23 @@ import (
 )
 
 func main() {
-	// explicit declaration of variables
-	// var <variable_name> <data_type> = <value>
+	const inflationRate = 2.5
+	var investmentAmount float64
+	var years float64
+	expectedReturnRate := 5.5
 
-	// var investmentAmount, years, expectedReturnRate float64 = 1000, 10, 5.5
+	fmt.Print("Enter the investment amount: $")
+	fmt.Scan(&investmentAmount)
 
-	// var blocks can be used to group variables of the same type
-	// var (
-	// 	investmentAmount float64 = 1000
-	// 	years int = 10
-	// 	expectedReturnRate float64 = 5.5
-	// )
+	fmt.Print("Enter the number of years: ")
+	fmt.Scan(&years)
 
-	var investmentAmount float64 = 1000
-	var years float64 = 10
-	expectedReturnRate := 5.5 // type inference
+	fmt.Print("Enter the expected return rate: ")
+	fmt.Scan(&expectedReturnRate)
 
-
-	futureValue := investmentAmount * math.Pow(1 + expectedReturnRate/100, years) 
+	futureValue := investmentAmount * math.Pow(1+expectedReturnRate/100, years)
+	futureRealValue := futureValue / math.Pow(1+inflationRate/100, years)
 
 	fmt.Println(futureValue) // Println - Println adds a new line at the end of the output
+	fmt.Println(futureRealValue)
 }
