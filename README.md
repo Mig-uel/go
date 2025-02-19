@@ -45,3 +45,20 @@ Popular Uses of Go:
 Go is a compiled language, which means that you need to install a compiler on your system in order to run Go programs.
 
 You can download the Go compiler from the official website at [golang.org](https://golang.org/).
+
+## About This Course
+
+This course is designed to teach you everything you need to know about Go, from the basics to more advanced topics.
+
+Topics covered in this course include:
+
+- Getting Started with Go
+- Essential Go Concepts
+- Packages
+- Pointers
+- Structs
+- Interfaces
+- Arrays, Slices, and Maps
+- Functions Deep Dive
+- Concurrency
+- Practice Projects
