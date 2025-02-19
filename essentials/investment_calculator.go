@@ -11,13 +11,16 @@ func main() {
 	var years float64
 	expectedReturnRate := 5.5
 
-	fmt.Print("Enter the investment amount: $")
+	// fmt.Print("Enter the investment amount: $")
+	outputText("Enter the investment amount: $")
 	fmt.Scan(&investmentAmount)
 
-	fmt.Print("Enter the number of years: ")
+	// fmt.Print("Enter the number of years: ")
+	outputText("Enter the number of years: ")
 	fmt.Scan(&years)
 
-	fmt.Print("Enter the expected return rate: ")
+	// fmt.Print("Enter the expected return rate: ")
+	outputText("Enter the expected return rate: ")
 	fmt.Scan(&expectedReturnRate)
 
 	futureValue := investmentAmount * math.Pow(1+expectedReturnRate/100, years)
@@ -32,4 +35,8 @@ func main() {
 
 	fmt.Print(formattedFutureValue)
 	fmt.Print(formattedFutureRealValue)
+}
+
+func outputText(input string) {
+	fmt.Print(input)
 }
