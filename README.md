@@ -35,4 +35,5 @@ Popular Uses of Go:
 - Cloud Computing
 - Microservices
 - Command-Line Tools
+- Automation
 - & More!
