@@ -234,3 +234,16 @@ func greet(name string) string {
 ```
 
 In the above code snippet, the `greet` function returns a formatted string.
+
+Functions can also return multiple values.
+
+```go
+func add(a, b int) (int, error) {
+  if a < 0 || b < 0 {
+    return 0, errors.New("both numbers must be positive")
+  }
+  return a + b, nil
+}
+```
+
+In the above code snippet, the `add` function returns the sum of two numbers and an error if either of the numbers is negative.
