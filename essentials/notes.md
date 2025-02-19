@@ -202,3 +202,35 @@ fmt.Print(`You can use backticks to print "quotes", 'single quotes', and newline
 ```
 
 In the above code snippet, backticks are used to print quotes and single quotes. Backticks are also used to print newlines.
+
+## Functions
+
+- Functions are blocks of code that perform a specific task.
+- Functions are declared using the `func` keyword.
+- Functions can take zero or more arguments.
+- Functions can return zero or more values.
+
+```go
+func greet() {
+  fmt.Print("Hello, world!")
+}
+```
+
+In the above code snippet, the `greet` function is declared using the `func` keyword.
+The `greet` function does not take any arguments and does not return any values.
+
+```go
+func greet(name string) {
+  fmt.Printf("Hello, %s!", name)
+}
+```
+
+In the above code snippet, the `greet` function takes a `name` argument of type `string`.
+
+```go
+func greet(name string) string {
+  return fmt.Sprintf("Hello, %s!", name)
+}
+```
+
+In the above code snippet, the `greet` function returns a formatted string.
