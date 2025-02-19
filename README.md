@@ -2,6 +2,8 @@
 
 Go is an open-source programming language that makes it easy to build simple, reliable, and efficient software. It is a statically typed language with syntax loosely derived from that of C, adding garbage collection, type safety, some dynamic-typing capabilities, additional built-in types such as variable-length arrays and key-value maps, and a large standard library.
 
+Features:
+
 - Focus on simplicity, clarity, and scalability
 
   - Inspired by languages like C, C++, and Python
