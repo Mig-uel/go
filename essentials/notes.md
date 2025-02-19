@@ -159,3 +159,16 @@ var (
 ```go
 const name = "John"
 ```
+
+## Getting User Input
+
+- You can get user input using the `fmt` package.
+- The `Scan` function is used to get user input.
+- The `Scan` function takes a pointer to the variable where the input will be stored.
+
+```go
+var name string
+fmt.Scan(&name)
+```
+
+In the above code snippet, the `Scan` function takes a pointer to the `name` variable. This is because the `Scan` function needs to modify the value of the `name` variable.
