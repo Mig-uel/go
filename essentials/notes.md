@@ -244,6 +244,11 @@ func add(a, b int) (int, error) {
   }
   return a + b, nil
 }
+
+sum, err := add(5, 10)
+if err != nil {
+  fmt.Print(err)
+}
 ```
 
 In the above code snippet, the `add` function returns the sum of two numbers and an error if either of the numbers is negative.
