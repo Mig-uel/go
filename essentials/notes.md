@@ -49,3 +49,10 @@ func main() {
 - The `main` function is the entry point of a Go program.
 - The `main` function is called when the program is executed.
 - The `main` function must be declared in the `main` package.
+
+## Why Main?
+
+- The `main` function is the entry point of a Go program.
+- The `main` function is called when the program is executed.
+- The `main` function must be declared in the `main` package.
+- The `main` function is a special function that is called by the Go runtime.
