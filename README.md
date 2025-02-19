@@ -39,3 +39,9 @@ Popular Uses of Go:
 - Command-Line Tools
 - Automation
 - & More!
+
+## Installation
+
+Go is a compiled language, which means that you need to install a compiler on your system in order to run Go programs.
+
+You can download the Go compiler from the official website at [golang.org](https://golang.org/).
