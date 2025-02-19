@@ -252,3 +252,23 @@ if err != nil {
 ```
 
 In the above code snippet, the `add` function returns the sum of two numbers and an error if either of the numbers is negative.
+
+Another way of returning multiple values is by using named return values.
+
+```go
+func add(a, b int) (sum int, err error) {
+  if a < 0 || b < 0 {
+    err = errors.New("both numbers must be positive")
+    return
+  }
+  sum = a + b
+  return
+}
+
+sum, err := add(5, 10)
+if err != nil {
+  fmt.Print(err)
+}
+```
+
+In the above code snippet, the `add` function uses named return values to return the sum of two numbers and an error if either of the numbers is negative.
