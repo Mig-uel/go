@@ -171,4 +171,34 @@ var name string
 fmt.Scan(&name)
 ```
 
-In the above code snippet, the `Scan` function takes a pointer to the `name` variable. This is because the `Scan` function needs to modify the value of the `name` variable.
+In the above code snippet, the `Scan` function takes a pointer to the `name` variable.
+This is because the `Scan` function needs to modify the value of the `name` variable.
+
+## Formatting Output and Strings
+
+- You can format output using the `fmt` package.
+- The `Print` function is used to print output.
+- The `Printf` function is used to format output.
+- The `Sprintf` function is used to format output without printing it.
+- The `Println` function is used to print output with a newline character.
+
+```go
+fmt.Print("Hello, world!")
+fmt.Printf("Hello, %s!", name)
+fmt.Println("Hello, world!")
+```
+
+In the above code snippet, the `Printf` function is used to format the output by replacing `%s` with the value of the `name` variable.
+
+```go
+formatted := fmt.Sprintf("Hello, %s!", name)
+fmt.Print(formatted)
+```
+
+In the above code snippet, the `Sprintf` function is used to format the output without printing it.
+
+```go
+fmt.Print(`You can use backticks to print "quotes", 'single quotes', and newlines`)
+```
+
+In the above code snippet, backticks are used to print quotes and single quotes. Backticks are also used to print newlines.
