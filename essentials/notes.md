@@ -56,3 +56,11 @@ func main() {
 - The `main` function is called when the program is executed.
 - The `main` function must be declared in the `main` package.
 - The `main` function is a special function that is called by the Go runtime.
+
+## Working with Values & Types
+
+- **Values** are the basic building blocks of a Go program.
+- **Types** are used to define the behavior of values.
+- **Variables** are used to store values.
+- **Constants** are used to define values that do not change.
+- **Operators** are used to perform operations on values.
