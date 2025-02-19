@@ -101,3 +101,50 @@ Here's a list of the null values for the different types:
 `string` => "" (i.e., an empty string)
 
 `bool` => false
+
+## Ways of Declaring Variables
+
+1. **Type Inference**: Go can infer the type of a variable based on the value assigned to it.
+
+```go
+name := "John"
+```
+
+2. **Explicit Declaration**: You can explicitly declare the type of a variable.
+
+```go
+var age int
+```
+
+3. **Multiple Declaration**: You can declare multiple variables at once.
+
+```go
+var name, age = "John", 25
+```
+
+4. **Zero Value**: Variables that are declared but not initialized are assigned a zero value.
+
+```go
+var age int // age is 0
+```
+
+5. **Short Declaration**: You can declare and initialize a variable in a single line.
+
+```go
+name := "John"
+```
+
+6. **Multiple Short Declaration**: You can declare and initialize multiple variables in a single line.
+
+```go
+name, age := "John", 25
+```
+
+7. **Var Block**: You can declare multiple variables in a block.
+
+```go
+var (
+  name = "John"
+  age  = 25
+)
+```
