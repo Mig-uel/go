@@ -148,3 +148,14 @@ var (
   age  = 25
 )
 ```
+
+## Constants
+
+- Constants are values that do not change.
+- Constants are declared using the `const` keyword.
+- Constants must be assigned a value when declared.
+- Constants cannot be declared using the `:=` syntax.
+
+```go
+const name = "John"
+```
