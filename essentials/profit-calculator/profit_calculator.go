@@ -4,7 +4,6 @@ import "fmt"
 
 func main() {
 	var revenue, expenses, taxRate float64
-	var ebt, profit, ratio float64
 
 	fmt.Println("*** Profit Calculator ***")
 
@@ -17,9 +16,9 @@ func main() {
 	fmt.Print("Enter tax rate: ")
 	fmt.Scan(&taxRate)
 
-	ebt = revenue - expenses
-	profit = ebt - (ebt * (taxRate / 100))
-	ratio = ebt / profit
+	ebt := revenue - expenses
+	profit := ebt - (ebt * (taxRate / 100))
+	ratio := ebt / profit
 
 	fmt.Println("EBT: ", ebt)
 	fmt.Println("Profit: ", profit)
