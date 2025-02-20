@@ -7,14 +7,14 @@ func main() {
 
 	fmt.Println("*** Profit Calculator ***")
 
-	fmt.Print("Enter the revenue: ")
-	fmt.Scan(&revenue)
+	// revenue
+	printAndPass("Enter the revenue: ", &revenue)
 
-	fmt.Print("Enter total of expenses: ")
-	fmt.Scan(&expenses)
+	// expenses
+	printAndPass("Enter total of expenses: ", &expenses)
 
-	fmt.Print("Enter tax rate: ")
-	fmt.Scan(&taxRate)
+	// tax rate
+	printAndPass("Enter tax rate: ", &taxRate)
 
 	ebt := revenue - expenses
 	profit := ebt - (ebt * (taxRate / 100))
@@ -23,4 +23,9 @@ func main() {
 	fmt.Println("EBT: ", ebt)
 	fmt.Println("Profit: ", profit)
 	fmt.Println("Ratio: ", ratio)
+}
+
+func printAndPass(text string, x *float64) {
+	fmt.Print(text)
+	fmt.Scan(x)
 }
