@@ -474,3 +474,31 @@ defer file.Close()
 ```
 
 In the above code snippet, the `Close` method is called on the `file` variable when the surrounding function returns.
+
+## Panic and Recover
+
+- The `panic` function is used to cause a runtime error.
+- The `recover` function is used to recover from a panic.
+
+```go
+func divide(a, b int) int {
+  if b == 0 {
+    panic("division by zero")
+  }
+  return a / b
+}
+
+func main() {
+  defer func() {
+    if r := recover(); r != nil {
+      fmt.Print("recovered from panic")
+    }
+  }()
+
+  result := divide(10, 0)
+  fmt.Print(result)
+}
+```
+
+In the above code snippet, the `divide` function panics if the second argument is `0`.
+The `recover` function is used to recover from the panic and print a message.
