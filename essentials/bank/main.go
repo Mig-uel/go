@@ -25,6 +25,11 @@ func main() {
 		fmt.Print("Deposit amount: $")
 		fmt.Scan(&depositAmount)
 
+		if depositAmount < 1 {
+			fmt.Println("Invalid deposit amount!")
+			return
+		}
+
 		balance += depositAmount
 
 		fmt.Printf("Your new balance is: $%.2f", balance)
@@ -33,6 +38,11 @@ func main() {
 
 		fmt.Print("Withdraw Amount: $")
 		fmt.Scan(&withdrawAmount)
+
+		if withdrawAmount > balance || withdrawAmount < 1 {
+			fmt.Println("Invalid withdraw amount")
+			return
+		}
 
 		balance -= withdrawAmount
 
