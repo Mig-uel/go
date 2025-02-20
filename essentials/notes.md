@@ -355,3 +355,22 @@ for i := 0; i < 5; i++ {
 ```
 
 In the above code snippet, the `continue` statement is used to skip the iteration when `i` is equal to `3`.
+
+### Switch Statement
+
+- The `switch` statement is used to execute a block of code based on the value of an expression.
+- The `switch` statement can have multiple `case` blocks.
+- The `switch` statement can have an optional `default` block.
+
+```go
+switch day {
+case "Monday":
+  fmt.Print("It's Monday")
+case "Tuesday":
+  fmt.Print("It's Tuesday")
+default:
+  fmt.Print("It's another day")
+}
+```
+
+In the above code snippet, the `switch` statement checks the value of the `day` variable and executes the corresponding block of code.
