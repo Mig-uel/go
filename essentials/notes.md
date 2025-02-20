@@ -437,3 +437,40 @@ defer file.Close()
 ```
 
 In the above code snippet, the `Close` method is called on the `file` variable using the `defer` keyword.
+
+## Comma Ok Syntax/Idiom
+
+- The comma ok syntax is used to check if a map lookup was successful.
+- The comma ok syntax returns two values: the value and a boolean indicating if the lookup was successful.
+
+```go
+ages := map[string]int{
+  "John": 25,
+  "Jane": 30,
+}
+
+age, ok := ages["John"]
+if ok {
+  fmt.Printf("John's age is %d", age)
+} else {
+  fmt.Print("John's age is unknown")
+}
+```
+
+In the above code snippet, the comma ok syntax is used to check if the lookup for the key `"John"` was successful.
+
+## Defer Statement
+
+- The `defer` statement is used to delay the execution of a function until the surrounding function returns.
+- The `defer` statement is often used to close files, release resources, or perform cleanup tasks.
+
+```go
+file, err := os.Open("file.txt")
+if err != nil {
+  fmt.Print(err)
+}
+
+defer file.Close()
+```
+
+In the above code snippet, the `Close` method is called on the `file` variable when the surrounding function returns.
