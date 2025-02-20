@@ -272,3 +272,24 @@ if err != nil {
 ```
 
 In the above code snippet, the `add` function uses named return values to return the sum of two numbers and an error if either of the numbers is negative.
+
+## Control Structures
+
+- Control structures are used to control the flow of a program.
+- Go has three main control structures: `if`, `for`, and `switch`.
+
+### If Statement
+
+- The `if` statement is used to execute a block of code if a condition is true.
+- The `if` statement can have an optional `else` block.
+- The `if` statement can have an optional `else if` block.
+
+```go
+if age >= 18 {
+  fmt.Print("You are an adult")
+} else {
+  fmt.Print("You are a child")
+}
+```
+
+In the above code snippet, the `if` statement checks if the `age` variable is greater than or equal to `18`.
