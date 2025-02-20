@@ -34,7 +34,7 @@ func main() {
 
 		switch userInput {
 		case 1:
-			fmt.Printf("Your balance is: $%.2f", balance)
+			fmt.Printf("Your balance is: $%.2f\n", balance)
 
 		case 2:
 			var depositAmount float64
