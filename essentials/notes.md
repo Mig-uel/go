@@ -328,3 +328,30 @@ for init; condition; post {
   // code block
 }
 ```
+
+#### Break and Continue
+
+- The `break` statement is used to exit a loop.
+- The `continue` statement is used to skip the current iteration of a loop.
+
+```go
+for i := 0; i < 5; i++ {
+  if i == 3 {
+    break
+  }
+  fmt.Print(i)
+}
+```
+
+In the above code snippet, the `break` statement is used to exit the loop when `i` is equal to `3`.
+
+```go
+for i := 0; i < 5; i++ {
+  if i == 3 {
+    continue
+  }
+  fmt.Print(i)
+}
+```
+
+In the above code snippet, the `continue` statement is used to skip the iteration when `i` is equal to `3`.
