@@ -28,5 +28,14 @@ func main() {
 		balance += depositAmount
 
 		fmt.Printf("Your new balance is: $%.2f", balance)
+	} else if userInput == 3 {
+		var withdrawAmount float64
+
+		fmt.Print("Withdraw Amount: $")
+		fmt.Scan(&withdrawAmount)
+
+		balance -= withdrawAmount
+
+		fmt.Printf("Your new balance is: $%.2f", balance)
 	}
 }
