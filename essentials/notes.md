@@ -293,3 +293,38 @@ if age >= 18 {
 ```
 
 In the above code snippet, the `if` statement checks if the `age` variable is greater than or equal to `18`.
+
+### For Loop
+
+- The `for` loop is used to execute a block of code repeatedly.
+- The `for` loop can have an optional `init`, `condition`, and `post` statement.
+
+```go
+for i := 0; i < 5; i++ {
+  fmt.Print(i)
+}
+```
+
+In the above code snippet, the `for` loop prints the numbers from `0` to `4`.
+
+In pseudo-code, the `for` loop can be represented as follows:
+
+```
+init statement (executed before the loop starts)
+while condition statement (evaluated before each iteration of the loop)
+  code block
+  post statement (executed after each iteration of the loop)
+end while
+```
+
+The `init` statement is executed before the loop starts.
+The `condition` statement is evaluated before each iteration of the loop.
+The `post` statement is executed after each iteration of the loop.
+
+Translated to Go code, the `for` loop can be represented as follows:
+
+```go
+for init; condition; post {
+  // code block
+}
+```
