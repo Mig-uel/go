@@ -374,3 +374,66 @@ default:
 ```
 
 In the above code snippet, the `switch` statement checks the value of the `day` variable and executes the corresponding block of code.
+
+## File I/O
+
+- You can read and write files in Go using the `os` and `io/ioutil` packages.
+- The `os` package provides functions for file operations.
+- The `io/ioutil` package provides functions for reading and writing files.
+
+### Reading Files
+
+- You can read the contents of a file using the `ReadFile` function from the `io/ioutil` package.
+
+```go
+data, err := ioutil.ReadFile("file.txt")
+if err != nil {
+  fmt.Print(err)
+}
+fmt.Print(string(data))
+```
+
+In the above code snippet, the `ReadFile` function reads the contents of the `file.txt` file and stores it in the `data` variable.
+
+### Writing Files
+
+- You can write data to a file using the `WriteFile` function from the `io/ioutil` package.
+
+```go
+data := []byte("Hello, world!")
+err := ioutil.WriteFile("file.txt", data, 0644)
+if err != nil {
+  fmt.Print(err)
+}
+```
+
+In the above code snippet, the `WriteFile` function writes the data to the `file.txt` file.
+
+### Creating Files
+
+- You can create a new file using the `Create` function from the `os` package.
+
+```go
+file, err := os.Create("file.txt")
+if err != nil {
+  fmt.Print(err)
+}
+defer file.Close()
+```
+
+In the above code snippet, the `Create` function creates a new file named `file.txt`.
+
+### Closing Files
+
+- You should always close files after you are done using them.
+- You can close a file using the `Close` method.
+
+```go
+file, err := os.Open("file.txt")
+if err != nil {
+  fmt.Print(err)
+}
+defer file.Close()
+```
+
+In the above code snippet, the `Close` method is called on the `file` variable using the `defer` keyword.
