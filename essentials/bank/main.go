@@ -1,13 +1,23 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"os"
+	"strconv"
 )
+
+const balanceFile = "balance.txt"
 
 func main() {
 	var userInput int
-	var balance float64 = 1000
+	var balance, err = readFromFile()
+
+	if err != nil {
+		fmt.Print("ERROR: ")
+		fmt.Println(err)
+		fmt.Println("-----------")
+	}
 
 	fmt.Println("Welcome to Go Bank!")
 
@@ -67,8 +77,28 @@ func main() {
 	}
 }
 
+// wite to file
 func writeToFile(balance float64) {
 	balanceString := fmt.Sprint(balance)
 
-	os.WriteFile("balance.txt", []byte(balanceString), 0644)
+	os.WriteFile(balanceFile, []byte(balanceString), 0644)
+}
+
+// read from file
+func readFromFile() (float64, error) {
+	data, err := os.ReadFile(balanceFile)
+
+	if err != nil {
+		return 1000, errors.New("failed to read file")
+	}
+
+	balanceText := string(data)
+
+	balance, err := strconv.ParseFloat(balanceText, 64)
+
+	if err != nil {
+		return 1000, errors.New("failed to parse stored balance value")
+	}
+
+	return balance, nil
 }
