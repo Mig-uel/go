@@ -21,7 +21,7 @@ func main() {
 
 	fmt.Printf("EBT: %.2f\n", ebt)
 	fmt.Printf("Profit: %.2f\n", profit)
-	fmt.Printf("Ratio: %.2f", ratio)
+	fmt.Printf("Ratio: %.3f", ratio)
 }
 
 func printAndPass(text string, x *float64) {
